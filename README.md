@@ -14,4 +14,6 @@ A simple fuzzer search that allows you to select a active docker container and a
 4. Show the possible commands to execute over the selected container, and ask to the user that select one of them
 5. Replace the ContainerID and execute the command with the ContainerID tag replaced with the selected ContainerID.
 
-<img src="https://raw.githubusercontent.com/kb05/docker-fuzzy-executer/master/images/docker-fuzzy-executer.gif" width="560" height="280">
+<p align="center">
+    <img src="https://raw.githubusercontent.com/kb05/docker-fuzzy-executer/master/images/docker-fuzzy-executer.gif" width="560" height="280">
+</p>
