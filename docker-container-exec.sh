@@ -18,7 +18,7 @@ then
 fi
 
 # Select the command to execute
-selectedCommandText=$(cat $commandListPath | jq -rs '.' | head -n-2 | tail -n+3| rev| cut -c2- | rev |  sed -e 's/^[ \t]*//' | fzf);
+selectedCommandText=$(cat $commandListPath | jq -rs '.' | head -n-2 | tail -n+3| rev| sed 's/\(.*\),/\1 /' | cut -c1- | rev |  sed -e 's/^[ \t]*//' | fzf);
 
 #Extract the command Key
 commandKey=$(echo {$selectedCommandText} | jq 'keys' | head -n-1 | tail -n+2 | xargs)
@@ -40,7 +40,7 @@ command=${command//\$containerId/$container};
 command="${command:1:${#command}-2}";
 
 #Exec the command
-clear;
+
 echo -e "\n\e[34m${command}\n\e[0m"
 $command;
 

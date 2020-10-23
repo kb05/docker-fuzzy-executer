@@ -3,5 +3,5 @@
     "stop" 		:	"docker stop $containerId",
     "pause" 	: 	"docker pause $containerId",
    	"unpause" 	:	"docker unpause $containerId",
-   	"logs"   	:	"docker logs $containerId"
+   	"logs"   	:	"docker logs -f $containerId"
 }
